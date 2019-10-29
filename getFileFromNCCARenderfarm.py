@@ -13,7 +13,7 @@ localDirSave = raw_input("Input the directory you would like to save your file t
 with pysftp.Connection(host=hostname, username=username, password=password) as sftp:
     print "Connection successfully established ... "  
 
-    finalDir = os.path.join(sftp.pwd, projectName, "images/rs_Ground")
+    finalDir = os.path.join(sftp.pwd, projectName, "images/")
 
     while 1:
         filesToRemoveAttr = sftp.listdir_attr(finalDir)
